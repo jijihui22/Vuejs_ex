@@ -9,19 +9,6 @@ defineProps({
     required: true
   }
 })
-const rawHtml = '<a href="">link</a>';
-const pid = 10;
-const isButtonDisabled = true;
-const objectOfAttrs = {
-      id: 'container',
-      class: 'wrapper'
-    }
-const number = 20;
-const ok = false;
-const message = '안녕하세요';
-const id = 30;
-const sayHello = (msg)=>{alert(msg);};
-const url = "https://www.naver.com/";
 </script>
 
 <template>
@@ -32,34 +19,6 @@ const url = "https://www.naver.com/";
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
-    <hr>
-    <h2>html 출력</h2>
-    <p>{{ rawHtml }}</p>
-    <p><span v-html="rawHtml"></span></p>
-    <hr>
-    <h2>속성 바인딩</h2>
-    <div v-bind:id="pid"></div>
-    <div :id="pid"></div>
-    <hr>
-    <h2>불리언 바인딩</h2>
-    <button :disabled="isButtonDisabled">버튼</button>
-    <button :disabled="!isButtonDisabled">버튼</button>
-    <hr>
-    <h2>여러속성 바인딩</h2>
-    <div v-bind="objectOfAttrs"></div>
-    <hr>
-    <h2>자바스크립트 표현식</h2>
-    {{ number + 1 }}
-    {{ ok ? '예' : '아니오' }}
-    {{ message.split('').reverse().join('') }}
-    <div :id="`list-${id}`"></div>
-    <hr>
-    <h2>함수 호출</h2>
-    <!-- <span :title="sayHello('hello')"></span> -->
-    <div>{{ sayHello('hello') }}</div>
-    <hr>
-    <h2>디렉티브</h2>
-    <div></div>
   </div>
 </template>
 
